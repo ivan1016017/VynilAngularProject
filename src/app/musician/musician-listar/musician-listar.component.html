@@ -1,0 +1,32 @@
+<div class="box">
+  <h1 i18n id='my_musicians'  class="mdc-typography--headline1 head-title">My Musicians</h1>
+
+
+  <div class='contenedor'>
+    <div  *ngFor="let m of musicians">
+        <mat-card class= "col-lg-8 mb-12" style="max-width: 50rem;" >
+
+            <app-card [nameTitle]=m.name [typeCard]=(typecard) [srcImg]=m.image (click)="onSelected(m)"></app-card>
+
+        </mat-card>
+
+      <span></span>
+    </div>
+  </div>
+
+  <div class=button-add>
+    <button id="addMusician" mat-fab color="primary" aria-label="Add new Musician" title="Agregar nuevo Musico" [routerLink]="'/dashboard/musicians/new'">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+
+  
+</div>
+
+<div class="row p-2">
+  <div class="col border">
+    <div *ngIf="selected">
+      <app-musician-detail [musicianDetail]="selectedMusician"></app-musician-detail>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="box">
+  <h1 i18n id='registered_collectors' class="mdc-typography--headline1 head-title">Registered Collectors</h1>
+
+  <span></span>
+
+  <div class='contenedor'>
+    <div  *ngFor="let c of collectors">
+
+        <mat-card class= "col-lg-8 mb-12" style="max-width: 50rem;" >
+
+            <app-card [nameTitle]=c.name [typeCard]=(typecard) [srcImg]="" (click)="onSelected(c)"></app-card>
+
+        </mat-card>
+
+
+        <span></span>
+      </div>
+    </div>
+
+    <div class=button-add>
+      <button id="addCollector" mat-fab color="primary" (click)="onCreate()" aria-label="Add new collectors" title="Add new collector">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+  </div>
+
+
+<div class="row p-2">
+  <div class="col border">
+    <div *ngIf="selected">
+      <app-collector-detail [collectorDetail]="selectedCollector"></app-collector-detail>
+    </div>
+
+
+
+  </div>
+
+</div>

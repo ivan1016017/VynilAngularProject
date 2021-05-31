@@ -1,0 +1,82 @@
+<!-- <div class="container-fluid">
+  <p class="h3 p-3">{{musicianDetail.name}}</p>
+  <div class="row">
+    <div class="col-2">
+      <div class="thumb">
+        <img class="img-fluid" src="{{musicianDetail.image}}" alt="{{musicianDetail.name}} image" />
+      </div>
+    </div>
+    <div class="col">
+      <dl>
+        <dt i18n id='musician_name'> Name</dt>
+        <dd>{{musicianDetail.name}}</dd>
+        <dt i18n id='musician_birthdate'>Birthdate</dt>
+        <dd>{{  dateFixed(musicianDetail.birthDate)  }}</dd>
+        <dt i18n id='band_prizes'>Awards</dt>
+        <dd *ngFor="let b of musicianDetail.performerPrizes"><a routerLink="../../prizes">{{b.premiationDate}}</a></dd>
+        <dt i18n id='musician_description' class="bold">Description</dt>
+        <dd>{{musicianDetail.description}}</dd>
+      </dl>
+    </div>
+  </div>
+
+
+</div> -->
+
+<div class="container-fluid">
+  <div class="row box-detail">
+    <h1  i18n id='musician_detail' class="box-detail__title">Musician Detail</h1>
+  </div>
+  <div class="row box-detail__wraper">
+    <div class="col-10 box-detail__content">
+      <div class="card-detail">
+
+        <div class="row card-detail__wraper">
+          <div class="col-4 card-detail__cover">
+            <img class="img-fluid card-detail__img" src="{{musicianDetail.image}}" alt="Musician cover"/>
+            <h1 i18n id='musician_birthdate' class="subtitle subtitle--cover ">Birthdate</h1>
+            <p class="text-content"> {{  dateFixed(musicianDetail.birthDate)  }} </p>
+
+
+          </div>
+          <div class="col-8 card-detail__content">
+            <h1 i18n id='musician_name' class="subtitle subtitle--header"> Name</h1>
+            <p class="text-content">{{musicianDetail.name}}</p>
+            <h2 i18n id='musician_description' class="subtitle">Description</h2>
+            <p class="text-content">{{musicianDetail.description}}</p>
+            <h2 i18n id='musician_Prizes_name' class="subtitle">Prizes</h2>
+
+            <table class="table" aria-label="Musician_Awards">
+              <thead>
+                <tr class= table__header>
+                  <th scope="col">#id</th>
+                  <th scope="col" i18n id='musician_track_name'>Prizes date</th>
+                </tr>
+              </thead>
+              <tbody class="table__content">
+                <tr *ngFor="let m of musicianDetail.performerPrizes">
+                  <th scope="row">{{m.id}}</th>
+                  <td><a class="table__link" routerLink="/dashboard/prizes">{{m.premiationDate}}</a></td>
+
+                </tr>
+              </tbody>
+            </table>
+
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <div class="col-2 box-detail__buttons" align="right">
+      <div class=button-add>
+        <button id="addPrizeToBand" mat-fab color="primary" aria-label="Add prize to musician" title="Add prize to musician" [routerLink]="'/dashboard/musicians/musician-prize'">
+          <mat-icon>local_play</mat-icon>
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+

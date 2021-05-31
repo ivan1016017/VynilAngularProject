@@ -1,0 +1,43 @@
+<div class="container" >
+
+  <div class="mat-card">
+
+    <div mat-dialog-title>
+      <h1 i18n id='title_new_collector'>Add Favorite Musician To Collector</h1>
+    </div>
+
+    <form  class="form" [formGroup]="collectorForm" (ngSubmit)="createCollectorMusicianLink(collectorForm.value)">
+
+      <mat-dialog-content class="mat-typography">
+
+        <mat-form-field class="form__field">
+          <mat-label i18n id='collector_collector' class="form__label"> Collector *</mat-label>
+          <mat-select formControlName="collector">
+            <mat-option *ngFor="let collector of allCollectors" [value]="collector" > {{collector.name}}
+            </mat-option>
+          </mat-select>
+          <mat-error i18n id='collector_required'  *ngIf="collectorForm.get('collector').hasError('required') && collectorForm.get('collector').touched">Collector required </mat-error>
+        </mat-form-field>
+
+
+        <mat-form-field class="form__field">
+          <mat-label i18n id='collector_musician' class="form__label"> Musicians *</mat-label>
+          <mat-select formControlName="musician">
+            <mat-option *ngFor="let musician of allMusicians" [value]="musician"> {{musician.name}}
+            </mat-option>
+          </mat-select>
+          <mat-error i18n id='collector_musician_required'  *ngIf="collectorForm.get('musician').hasError('required') && collectorForm.get('musician').touched">Musician required </mat-error>
+        </mat-form-field>
+
+      </mat-dialog-content>
+
+      <mat-dialog-actions align="end">
+        <div class="button-row">
+          <button i18n type="submit" class="button-row__submit"  id="submit" mat-flat-button color="primary"  [disabled]="!collectorForm.valid">Create</button>
+          <button i18n class="button-row__clear"  mat-stroked-button id="cancel" color="warn" (click)="cancelCreation()">Cancel</button>
+        </div>
+      </mat-dialog-actions>
+
+    </form>
+  </div>
+</div>

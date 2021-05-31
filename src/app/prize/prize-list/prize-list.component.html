@@ -1,0 +1,33 @@
+<div class="box">
+  <h1 i18n id='my_awards' class="mdc-typography--headline1 head-title">Awards</h1>
+
+
+  <div class='contenedor'>
+    <div  *ngFor="let p of prizes">
+        <mat-card class= "col-lg-8 mb-12" style="max-width: 50rem;" >
+
+            <app-card [nameTitle]=p.name [typeCard]=(typecard) [srcImg]="" (click)="onSelected(p)"></app-card>
+
+        </mat-card>
+
+
+        <span></span>
+      </div>
+    </div>
+
+    <div class=button-add>
+      <button id="addPrize" mat-fab color="primary" aria-label="Add new Prize" title="Agregar nuevo Premio" [routerLink]="'/dashboard/prizes/new'">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+
+  </div>
+
+
+  <div class="row p-2">
+    <div class="col border">
+      <div *ngIf="selected">
+        <app-prize-detail [prizeDetail]="selectedPrize"></app-prize-detail>
+      </div>
+    </div>
+  </div>

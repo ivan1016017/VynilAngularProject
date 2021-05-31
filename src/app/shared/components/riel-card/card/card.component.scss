@@ -1,0 +1,61 @@
+.card{
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
+  width: 305px;
+  height: 420px;
+  // align-items: center;
+
+  letter-spacing: 0.05em;
+  text-transform: capitalize;
+
+  &-container{
+    text-align:center;
+    margin-top: 22px;
+   }
+
+   &-img{
+    height: 222px; //or however you want it
+    width:auto;
+    max-width: 220px; //so that the image ratio stays the same
+   }
+   &-body{
+    margin-left: 25px;
+   }
+
+  &-title{
+    font-family: Cabin,sans-serif, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 50px;
+    color: #000000;
+    margin-top: -15px;
+
+  }
+
+  &-type{
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 40px;
+    color: #5c5a52;
+  }
+
+  &:hover{
+    width: 336px;
+    height: 400px;
+    background-color:#0B0C10 ;
+    transition-delay: 200ms;
+    filter: drop-shadow(0px 18.9751px 37.9502px rgba(0, 0, 0, 0.25));
+  }
+}
+
+.card:hover .card-type{
+  color: #FFDA8A;
+  transition-delay: 200ms;
+}
+.card:hover .card-title{
+  color: #FDFDFD;
+  transition-delay: 200ms;
+}

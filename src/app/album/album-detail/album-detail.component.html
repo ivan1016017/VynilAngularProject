@@ -1,0 +1,63 @@
+
+<div class="container-fluid">
+  <div class="row box-detail">
+    <h1  i18n id='album_detail' class="box-detail__title">Album Detail</h1>
+  </div>
+  <div class="row box-detail__wraper">
+    <div class="col-10 box-detail__content">
+      <div class="card-detail">
+
+        <div class="row card-detail__wraper">
+          <div class="col-4 card-detail__cover">
+            <img class="img-fluid card-detail__img" src="{{albumDetail.cover}}" alt="Album cover"/>
+            <h1 i18n id='album_release_date' class="subtitle subtitle--cover ">Release date</h1>
+            <p class="text-content">{{  dateFixed(albumDetail.releaseDate)  }}</p>
+            <h1 i18n id='album_genre' class="subtitle subtitle--cover ">Genre</h1>
+            <p class="text-content">{{  albumDetail.genre  }}</p>
+            <h1 i18n id='album_recordLabel' class="subtitle subtitle--cover ">Record</h1>
+            <p class="text-content">{{  albumDetail.recordLabel  }}</p>
+
+          </div>
+          <div class="col-8 card-detail__content">
+            <h1 i18n id='album_name' class="subtitle subtitle--header"> Name</h1>
+            <p class="text-content">{{albumDetail.name}}</p>
+            <h2 i18n id='album_description' class="subtitle">Description</h2>
+            <p class="text-content">{{albumDetail.description}}</p>
+            <h2 i18n id='album_track_name' class="subtitle">Tracks</h2>
+
+            <table class="table" aria-label="Album_tracks">
+              <thead>
+                <tr class= table__header>
+                  <th scope="col">#id</th>
+                  <th scope="col" i18n id='album_track_name'>Track name</th>
+                  <th scope="col" i18n id='album_track_length'>Length</th>
+                </tr>
+              </thead>
+              <tbody class="table__content">
+                <tr *ngFor="let a of albumDetail.tracks">
+                  <th scope="row">{{a.id}}</th>
+                  <td>{{a.name}}</td>
+                  <td>{{a.duration}}</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2 i18n id='album_comments' class="subtitle">Collector comments</h2>
+            <p *ngFor="let a of albumDetail.comments"><a i18n id='comment_description'>Description:{{a.description}}   Rating:{{a.rating}}  </a></p>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <div class="col-2 box-detail__buttons" align="right">
+      <div class=button-add>
+        <button id ="addTrack" mat-fab color="primary" aria-label="Add New track to Album" title="Add new Track to Album" [routerLink]="'/dashboard/albums/album-track'">
+          <mat-icon>library_music</mat-icon>
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>

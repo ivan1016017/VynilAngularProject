@@ -1,0 +1,63 @@
+<div class="container" >
+
+  <div class="mat-card">
+
+    <div mat-dialog-title>
+      <h1 i18n id='title_new_collector'>Add Album to Your Collection</h1>
+    </div>
+
+    <form  class="form" [formGroup]="collectorForm" (ngSubmit)="createCollectorBandLink(collectorForm.value)">
+
+      <mat-dialog-content class="mat-typography">
+
+        <mat-form-field class="form__field">
+          <mat-label i18n id='collector_collector' class="form__label"> Collector *</mat-label>
+          <mat-select formControlName="collector">
+            <mat-option *ngFor="let collector of allCollectors" [value]="collector"> {{collector.name}}
+            </mat-option>
+          </mat-select>
+          <mat-error i18n id='collector_required'  *ngIf="collectorForm.get('collector').hasError('required') && collectorForm.get('collector').touched">Collector required </mat-error>
+        </mat-form-field>
+
+
+        <mat-form-field class="form__field">
+          <mat-label i18n id='collector_album' class="form__label"> Albums *</mat-label>
+          <mat-select formControlName="album">
+            <mat-option *ngFor="let album of allAlbums" [value]="album"> {{album.name}}
+            </mat-option>
+          </mat-select>
+          <mat-error i18n id='collector_album_required'  *ngIf="collectorForm.get('album').hasError('required') && collectorForm.get('album').touched">Album required </mat-error>
+        </mat-form-field>
+
+
+        <mat-form-field class="form__field">
+          <mat-label i18n id='collector_album__price' class="form__label">Album Price *</mat-label>
+          <input i18n-placeholder id='input_create_collector_album_price' formControlName="price" matInput placeholder="Album price">
+          <mat-error i18n id='collector_album_price_required' *ngIf="collectorForm.get('price').hasError('required')"> Price required</mat-error>
+          <mat-error i18n id='name_too_short' *ngIf="collectorForm.get('price').hasError('minlength')"> Name too short. It should be at least 3 characters</mat-error>
+        </mat-form-field>
+
+
+        <mat-form-field class="form__field">
+          <mat-label i18n id='collector_album_status' class="form__label"> Album status *</mat-label>
+          <mat-select formControlName="status">
+            <mat-option *ngFor="let status of allStatus" [value]="status"> {{status}}
+            </mat-option>
+          </mat-select>
+          <mat-error i18n id='collector_album_status_required'  *ngIf="collectorForm.get('status').hasError('required') && collectorForm.get('status').touched">Album status required </mat-error>
+        </mat-form-field>
+
+      </mat-dialog-content>
+
+      <mat-dialog-actions align="end">
+        <div class="button-row">
+          <!-- <button  type="submit" class="button-row__submit"  id="submit" mat-flat-button color="primary"  [disabled]="!collectorForm.valid" [mat-dialog-close]="true" >Submmit</button> -->
+          <!-- <button class="button-row__clear"  mat-stroked-button id="cancel" color="warn" mat-dialog-close (click)="cancelCreation()">Cancel</button> -->
+          <button i18n type="submit" class="button-row__submit"  id="submit" mat-flat-button color="primary"  [disabled]="!collectorForm.valid">Create</button>
+          <button i18n class="button-row__clear"  mat-stroked-button id="cancel" color="warn" (click)="cancelCreation()">Cancel</button>
+        </div>
+      </mat-dialog-actions>
+
+    </form>
+  </div>
+</div>

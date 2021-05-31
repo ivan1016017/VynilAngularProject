@@ -1,0 +1,29 @@
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  color: #171718
+}
+hr {
+  border-color: #000000;
+  border-width: 3px;
+  max-width: 65px;
+  margin-bottom: 5em;
+}
+
+.principal-layout {
+  /* background: url(/src/assets/LogoApp.png) no-repeat center center fixed; */
+  height: 100vh;
+  background-color:#F7F2EC;
+  border-left: solid 2em #FFDA8A;
+  /* background-size: cover; */
+}
+.fondoMainLogo {
+  background: url(src/assets/main_records.jpg) no-repeat center center fixed;
+  filter: brightness(70%);
+  background-size: cover;
+  height: 100vh;
+
+}
+
+

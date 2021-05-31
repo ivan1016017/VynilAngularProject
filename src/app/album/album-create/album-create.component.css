@@ -1,0 +1,38 @@
+.container{
+  max-width: 500px;
+  padding: 20px
+}
+
+.mat-card{
+  padding: 20px;
+}
+
+.mat-dialog-title{
+  margin-bottom: 5px;
+}
+
+.form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.form__field {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.form__label{
+  color: #272b30;
+}
+
+.button-row  {
+  margin-top: 10px;
+}
+.button-row button {
+  margin: 5px;
+}
+
+.button-row__submit:hover{
+  color:#FFDA8A;
+}

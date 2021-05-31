@@ -1,0 +1,49 @@
+<div class="container" >
+
+  <div class="mat-card">
+
+    <div mat-dialog-title>
+      <h1 i18n id='title_new_musician'>Create New Musician</h1>
+    </div>
+
+    <form  class="form" [formGroup]="musicianForm" (ngSubmit)="createMusician(musicianForm.value)">
+
+      <mat-dialog-content class="mat-typography">
+
+        <mat-form-field class="form__field">
+          <mat-label i18n id='create_musician_name' class="form__label">Musician Name</mat-label>
+          <input i18n-placeholder formControlName="name" matInput placeholder="Musician name">
+          <mat-error i18n id='name_required' *ngIf="musicianForm.get('name').hasError('required')"> Name required</mat-error>
+          <mat-error i18n id='name_too_short' *ngIf="musicianForm.get('name').hasError('minlength')"> Name too short. It should be at least 3 characters</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="form__field">
+          <mat-label i18n id='musician_birthdate' class="form__label"> Birthdate *</mat-label>
+          <input id-placeholder formControlName="birthDate" matInput id="birthDate"  type="date" placeholder="Birthdate" >
+          <mat-error i18n id="date_required" *ngIf="musicianForm.get('birthDate').hasError('required')"> Date required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="form__field">
+          <mat-label i18n id='musician_description' class="form__label">Description</mat-label>
+          <input i18n-placeholder formControlName="description" matInput placeholder="Write a short description of the band">
+          <mat-error i18n id='description_required' *ngIf="musicianForm.get('description').hasError('required')"> Description required</mat-error>
+          <mat-error i18n id='description-musician_too_short' *ngIf="musicianForm.get('description').hasError('minlength')"> The description is too short. It should be at least 10 characters</mat-error>
+        </mat-form-field>
+
+      </mat-dialog-content>
+
+      <mat-dialog-actions align="end">
+        <div class="button-row">
+          <button i18n class="button-row__submit"  id="submit" mat-flat-button color="primary"  type="submit"    [disabled]="musicianForm.invalid">Create</button>
+          <button i18n mat-stroked-button id="cancel" color="warn" type="button"  (click)="cancelCreation()">Cancel</button>
+        </div>
+      </mat-dialog-actions>
+
+    </form>
+  </div>
+</div>
+
+
+
+
+

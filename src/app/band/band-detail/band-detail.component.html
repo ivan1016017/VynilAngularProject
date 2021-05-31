@@ -1,0 +1,103 @@
+<!-- <div class="container-fluid">
+  <p class="h3 p-3">{{bandDetail.name}}</p>
+  <div class="row">
+    <div class="col-2">
+      <div class="thumb">
+        <img class="img-fluid" src="{{bandDetail.image}}" alt="{{bandDetail.name}} image" />
+      </div>
+    </div>
+    <div class="col">
+      <dl>
+        <dt i18n id='band_name'> Name</dt>
+        <dd>{{bandDetail.name}}</dd>
+        <dt i18n id='band_musicians'> Musicians</dt>
+        <dd *ngFor="let a of bandDetail.musicians"><a routerLink="../../musicians">{{a.name}}</a></dd>
+        <dt i18n id='band_prizes'>Awards</dt>
+        <dd *ngFor="let b of bandDetail.performerPrizes"><a routerLink="../../prizes">{{b.premiationDate}}</a></dd>
+        <dt i18n id='band_creation_date'> Creation Date</dt>
+        <dd>{{  dateFixed(bandDetail.creationDate)  }}</dd>
+        <dt i18n id='band_description' class="bold">Description</dt>
+        <dd>{{bandDetail.description}}</dd>
+      </dl>
+    </div>
+  </div>
+
+</div> -->
+
+<div class="container-fluid">
+  <div class="row box-detail">
+    <h1  i18n id='band_detail' class="box-detail__title">Band Detail</h1>
+  </div>
+  <div class="row box-detail__wraper">
+    <div class="col-10 box-detail__content">
+      <div class="card-detail">
+
+        <div class="row card-detail__wraper">
+          <div class="col-4 card-detail__cover">
+            <img class="img-fluid card-detail__img" src="{{bandDetail.image}}" alt="Musician cover"/>
+            <h1 i18n id='band_creation_date' class="subtitle subtitle--cover ">Creation Date</h1>
+            <p class="text-content"> {{  dateFixed(bandDetail.creationDate)  }} </p>
+
+
+          </div>
+          <div class="col-8 card-detail__content">
+            <h1 i18n id='band_name' class="subtitle subtitle--header"> Name</h1>
+            <p class="text-content">{{bandDetail.name}}</p>
+            <h2 i18n id='band_description' class="subtitle">Description</h2>
+            <p class="text-content">{{bandDetail.description}}</p>
+
+            <h2 i18n id='band_musicians' class="subtitle">Musicians</h2>
+            <table class="table" aria-label="Table with Musicians">
+              <thead>
+                <tr class= table__header>
+                  <th scope="col">#id</th>
+                  <th scope="col" i18n id='band_musician_name'>Musician Name</th>
+                </tr>
+              </thead>
+              <tbody class="table__content">
+                <tr *ngFor="let a of bandDetail.musicians">
+                  <th scope="row">{{a.id}}</th>
+                  <td><a class="table__link" routerLink="/dashboard/musicians">{{a.name}}</a></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2 i18n id='band_awards' class="subtitle">Awards</h2>
+            <table class="table" aria-label="Table with Awards">
+              <thead>
+                <tr class= table__header>
+                  <th scope="col">#id</th>
+                  <th scope="col" i18n id='band_track_name'>Premiation date</th>
+                </tr>
+              </thead>
+              <tbody class="table__content">
+                <tr *ngFor="let b of bandDetail.performerPrizes">
+                  <th scope="row">{{b.id}}</th>
+                  <td><a class="table__link" routerLink="/dashboard/prizes">{{b.premiationDate}}</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-2 box-detail__buttons" align="right">
+
+      <div class=button-add>
+        <button id="addMusicianToBand" mat-fab color="primary" aria-label="Add new Band" title="Add musician to band" [routerLink]="'/dashboard/bands/band-musician'">
+          <mat-icon>person_add</mat-icon>
+        </button>
+      </div>
+
+      <div class=button-add>
+        <button id="addPrizeToBand" mat-fab color="primary" aria-label="Add prize to Band" title="Add prize to band" [routerLink]="'/dashboard/bands/band-prize'">
+          <mat-icon>local_play</mat-icon>
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+

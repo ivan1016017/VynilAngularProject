@@ -1,0 +1,21 @@
+
+<mat-toolbar color="primary">
+<mat-toolbar-row>
+  <a [routerLink]="'/main'">
+    <img class="img-fluid" src="../assets/LogoApp.png" alt="Logotipo app" title="Clic para volver al Home" id="home"/>
+  </a>
+
+  <span class = "filler"></span>
+
+  <div class="menus">
+
+      <a i18n id="goAlbums" mat-stroked-button [routerLink]="'./albums'"> Albums </a>
+      <a i18n id="goMusicians" mat-stroked-button [routerLink]="'./musicians'"> Musicians</a>
+      <a i18n id="goBands" mat-stroked-button  [routerLink]="'./bands'"> Bands </a>
+      <a i18n id="goPrizes" mat-stroked-button [routerLink]="'./prizes'"> Awards </a>
+      <a i18n id="goCollectors" mat-stroked-button [routerLink]="'./collectors'"> Collectors </a>
+
+  </div>
+</mat-toolbar-row>
+</mat-toolbar>
+

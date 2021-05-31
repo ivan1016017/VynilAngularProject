@@ -1,0 +1,13 @@
+.filler {
+  flex: 1 1 auto;
+}
+
+
+.img-fluid {
+    max-width: 25%;
+    filter: invert(1);
+}
+
+.mat-stroked-button:hover{
+  color:#FFDA8A;
+}

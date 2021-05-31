@@ -1,0 +1,28 @@
+<div class="box">
+  <h1 i18n id='my-bands' class="mdc-typography--headline1 head-title">My Bands</h1>
+
+
+  <div class='contenedor'>
+    <div  *ngFor="let b of bands">
+        <mat-card class= "col-lg-8 mb-12" style="max-width: 50rem;" >
+            <app-card [nameTitle]=b.name [typeCard]=(typecard) [srcImg]=b.image (click)="onSelected(b)"></app-card>
+        </mat-card>
+      <span></span>
+    </div>
+  </div>
+
+  <div class=button-add>
+    <button id="addBand" mat-fab color="primary" aria-label="Add new Band" title="Agregar nueva Banda" [routerLink]="'/dashboard/bands/new'">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+
+</div>
+
+<div class="row p-2">
+  <div class="col border">
+    <div *ngIf="selected">
+      <app-band-detail [bandDetail]="selectedBand"></app-band-detail>
+    </div>
+  </div>
+</div>

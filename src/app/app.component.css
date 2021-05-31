@@ -1,0 +1,14 @@
+.flexExpand {
+  flex: 1 1 auto;
+}
+.img-fluid {
+  display: inline;
+  max-width: 23% !important;
+  /* margin-left: 2% !important; */
+    -webkit-filter: invert(1);
+    filter: invert(1);
+}
+
+.sidenav1 {
+  background-color: #ffe599;
+}

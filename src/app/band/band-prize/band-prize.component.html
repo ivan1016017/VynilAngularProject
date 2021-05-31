@@ -1,0 +1,63 @@
+
+<div class="container" >
+
+  <div class="mat-card">
+
+    <div mat-dialog-title>
+      <h1 i18n id='title_new_band'>Add Award to Band</h1>
+    </div>
+
+    <form [formGroup]="bandForm" (ngSubmit)="createPrizeToBand(bandForm.value)">
+
+      <mat-dialog-content class="mat-typography">
+
+        <mat-form-field class="form__field">
+          <mat-label i18n id='band_prize' class="form__label"> Prize *</mat-label>
+          <mat-select formControlName="prize">
+            <mat-option *ngFor="let prize of allPrizes" [value]="prize"> {{prize.name}}
+            </mat-option>
+          </mat-select>
+          <mat-error i18n id='prize_required'  *ngIf="bandForm.get('prize').hasError('required') && bandForm.get('prize').touched">Award required </mat-error>
+        </mat-form-field>
+
+
+
+        <mat-form-field class="form__field">
+          <mat-label i18n id='band_band' class="form__label"> Bands *</mat-label>
+          <mat-select formControlName="band">
+            <mat-option *ngFor="let band of allBands" [value]="band"> {{band.name}}
+            </mat-option>
+          </mat-select>
+          <mat-error i18n id='band_required'  *ngIf="bandForm.get('band').hasError('required') && bandForm.get('band').touched">Band required </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="form__field">
+          <mat-label class="form__label" i18n id='album_release_date'> Premiation Date * </mat-label>
+          <input i18n-placeholder matInput type="date"  formControlName="premiationDate" placeholder="Release Date">
+          <mat-error  i18n id='release_date_required' *ngIf="bandForm.get('premiationDate').hasError('premiationDate') && bandForm.get('premiationDate').touched"> Date required </mat-error>
+        </mat-form-field>
+
+      </mat-dialog-content>
+
+        <!-- <mat-dialog-actions align="end">
+          <div class="button-row">
+            <button  type="submit" class="button-row__submmit" mat-flat-button color="primary"  [disabled]="bandForm.invalid" [mat-dialog-close]="true" >Create</button>
+            <button class="button-row__clear"  mat-stroked-button id="cancel" color="warn" mat-dialog-close (click)="cancelCreation()">Cancel</button>
+          </div>
+        </mat-dialog-actions>
+
+            </form>
+          </div>
+        </div>
+        -->
+
+      <mat-dialog-actions align="end">
+        <div class="button-row">
+          <button i18n class="button-row__submit"  id="submit" mat-flat-button color="primary"  type="submit"    [disabled]="bandForm.invalid">Create</button>
+          <button i18n mat-stroked-button id="cancel" color="warn" type="button"  (click)="cancelCreation()">Cancel</button>
+        </div>
+      </mat-dialog-actions>
+
+    </form>
+  </div>
+</div>

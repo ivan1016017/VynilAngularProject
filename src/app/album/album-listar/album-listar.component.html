@@ -1,0 +1,33 @@
+<div class="box">
+  <h1 i18n id='my_albums' class="mdc-typography--headline1 head-title">My Albums</h1>
+
+
+  <div class='contenedor'>
+    <div  *ngFor="let a of albums; let i = index">
+
+        <mat-card class= "col-lg-8 mb-12" style="max-width: 50rem;" >
+
+            <app-card [nameTitle]=a.name [typeCard]=(typecard) [srcImg]=a.cover (click)="onSelected(a)"></app-card>
+
+        </mat-card>
+
+        <span></span>
+      </div>
+    </div>
+
+    <div class=button-add>
+      <button id ="addAlbum" mat-fab color="primary" aria-label="Add new Album" title="Agregar nuevo Album" [routerLink]="'/dashboard/albums/new'">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+
+  </div>
+
+  <div class="row p-2">
+    <div class="col border">
+      <div *ngIf="selected">
+        <app-album-detail [albumDetail]="selectedAlbum"></app-album-detail>
+      </div>
+    </div>
+  </div>
+

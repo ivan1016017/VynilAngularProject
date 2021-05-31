@@ -1,0 +1,54 @@
+<div class="container" >
+
+  <div class="mat-card">
+
+    <div mat-dialog-title>
+      <h1 i18n id='title_new_album'>Add Track to Album</h1>
+    </div>
+
+    <form [formGroup]="albumForm" (ngSubmit)="createTrackAlbum(albumForm.value)">
+
+      <mat-dialog-content class="mat-typography">
+
+        <mat-form-field class="form__field">
+          <mat-label i18n id='album_name' class="form__label"> Albums *</mat-label>
+          <mat-select role="textbox" aria-expanded="true" formControlName="album">
+            <mat-option *ngFor="let album of allAlbums" [value]="album"> {{album.name}}
+            </mat-option>
+          </mat-select>
+          <mat-error i18n id='band_required'  *ngIf="albumForm.get('album').hasError('required') && albumForm.get('album').touched">Band required </mat-error>
+        </mat-form-field>
+
+
+        <mat-form-field class="form__field">
+          <mat-label i18n id='track_name' class="form__label" color="primary" > Track's name * </mat-label>
+          <input i18n-placeholder matInput id="description_track_name"  role="textbox" formControlName="nameTrack" placeholder="Track's name">
+          <mat-error i18n id='track_name_description_required' *ngIf="albumForm.get('nameTrack').hasError('required') && albumForm.get('nameTrack').touched">
+            Description required
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="form__field">
+          <mat-label i18n id='track_description' class="form__label" color="primary" > Track's duration * </mat-label>
+          <input i18n-placeholder matInput id="description_form__field"  role="textbox" formControlName="durationTrack" placeholder="Track's duration">
+          <mat-error i18n id='track_description_description_required' *ngIf="albumForm.get('durationTrack').hasError('required') && albumForm.get('durationTrack').touched">
+            Description required
+          </mat-error>
+        </mat-form-field>
+
+
+
+
+
+      </mat-dialog-content>
+
+      <mat-dialog-actions align="end">
+        <div class="button-row">
+          <button i18n class="button-row__submit"  id="create_album_submit" mat-flat-button color="primary"  type="submit"  [disabled]="albumForm.invalid">Create</button>
+          <button i18n mat-stroked-button id="create_album_cancel" color="warn" type="button"  (click)="cancelCreation()">Cancel</button>
+        </div>
+      </mat-dialog-actions>
+
+    </form>
+  </div>
+</div>

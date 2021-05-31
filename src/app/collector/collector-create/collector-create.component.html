@@ -1,0 +1,52 @@
+<div class="container" >
+
+  <div class="mat-card">
+
+    <div mat-dialog-title>
+      <h1 i18n id='title_new_collector'>Create New Collector</h1>
+    </div>
+
+    <form  class="form" [formGroup]="collectorForm" (ngSubmit)="createCollector(collectorForm.value)">
+
+      <mat-dialog-content class="mat-typography">
+
+        <mat-form-field class="form__field">
+          <mat-label i18n id='create_collector_name' class="form__label">Collector Name *</mat-label>
+          <input i18n-placeholder id='input_create_collector_name' formControlName="name" matInput placeholder="Full Name">
+          <mat-error i18n id='name_required' *ngIf="collectorForm.get('name').hasError('required')"> Name required</mat-error>
+          <mat-error i18n id='name_too_short' *ngIf="collectorForm.get('name').hasError('minlength')"> Name too short. It should be at least 3 characters</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="form__field">
+          <mat-label class="form__label" i18n id='album_collector_phone'>Phone *</mat-label>
+          <input i18n-placeholder id='input_album_collector_phone' formControlName="telephone" matInput placeholder="3101234">
+          <mat-error i18n id='phone_required' *ngIf="collectorForm.get('telephone').hasError('required')"> Telephone required</mat-error>
+          <mat-error i18n id='phone_too_short' *ngIf="collectorForm.get('telephone').hasError('minlength')"> Telephone too short. It should be at least 7 characters</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="form__field">
+          <mat-label i18n id='collector_email' class="form__label">Email Address *</mat-label>
+          <input i18n-placeholder id='input_collector_email' formControlName="email" matInput placeholder="user@example.com">
+          <mat-error i18n id='email_required' *ngIf="collectorForm.get('email').hasError('required')">Email required</mat-error>
+          <mat-error i18n id='email_invalid' *ngIf="collectorForm.get('email').hasError('email')">Incorrect email format. It must include the character @</mat-error>
+        </mat-form-field>
+
+      </mat-dialog-content>
+
+      <mat-dialog-actions align="end">
+        <div class="button-row">
+          <!-- <button  type="submit" class="button-row__submit"  id="submit" mat-flat-button color="primary"  [disabled]="!collectorForm.valid" [mat-dialog-close]="true" >Submmit</button> -->
+          <!-- <button class="button-row__clear"  mat-stroked-button id="cancel" color="warn" mat-dialog-close (click)="cancelCreation()">Cancel</button> -->
+          <button i18n type="submit" class="button-row__submit"  id="submit" mat-flat-button color="primary"  [disabled]="!collectorForm.valid">Create</button>
+          <button i18n class="button-row__clear"  mat-stroked-button id="cancel" color="warn" (click)="cancelCreation()">Cancel</button>
+        </div>
+      </mat-dialog-actions>
+
+    </form>
+  </div>
+</div>
+
+
+
+
+

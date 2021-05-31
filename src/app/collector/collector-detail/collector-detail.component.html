@@ -1,0 +1,116 @@
+<!-- <div class="container-fluid">
+  <p class="h3 p-3">{{collectorDetail.name}}</p>
+  <div class="row">
+    <div class="col-2">
+      <div class="thumb">
+        <img class="img-fluid" src="../assets/logoDefaultCard.jpg" alt="Shared Records Logo"/>
+      </div>
+    </div>
+    <div class="col">
+      <dl>
+        <dt i18n id='collector_name'>Collector name</dt>
+        <dd>{{collectorDetail.name}}</dd>
+
+<dt i18n id='shared_albums'>Albums Collection</dt>
+        <dd *ngFor="let a of collectorDetail.collectorAlbums"><a routerLink="../../albums">id:{{a.id}}  price:{{a.price}}COP  status:{{a.status}}</a></dd>
+
+        <dt i18n id='shared_albums'>Favorite Performers</dt>
+        <dd *ngFor="let a of collectorDetail.favoritePerformers"><a routerLink="../../musicians">name: {{a.name}}</a></dd>
+
+        <dt i18n id='collector_phone'>Phone</dt>
+        <dd>{{  collectorDetail.telephone  }}</dd>
+
+        <dt i18n id='collector_email' class="bold">Email</dt>
+        <dd>{{collectorDetail.email }}</dd>
+      </dl>
+    </div>
+  </div>
+
+</div> -->
+
+
+<div class="container-fluid">
+  <div class="row box-detail">
+    <h1  i18n id='collector_detail' class="box-detail__title">Collector Detail</h1>
+  </div>
+  <div class="row box-detail__wraper">
+    <div class="col-10 box-detail__content">
+      <div class="card-detail">
+
+        <div class="row card-detail__wraper">
+          <div class="col-4 card-detail__cover">
+            <img class="card-detail__img" src="../assets/logoDefaultCard.jpg" alt="Shared Records Logo"/>
+
+          </div>
+          <div class="col-8 card-detail__content">
+            <h1 i18n id='collector_name' class="subtitle subtitle--header"> Name</h1>
+            <p class="text-content">{{collectorDetail.name}}</p>
+            <h2 i18n id='collector_phone' class="subtitle">Phone</h2>
+            <p class="text-content">{{  collectorDetail.telephone  }}</p>
+            <h2 i18n id='collector_email' class="subtitle">Email</h2>
+            <p class="text-content">{{collectorDetail.email }}</p>
+
+
+            <h2 i18n id='shared_albums' class="subtitle">Album Collection</h2>
+            <table class="table" aria-label="Album_collection">
+              <thead>
+                <tr class= table__header>
+                  <th scope="col">#id</th>
+                  <th scope="col" i18n id='collector_album_price'>Price</th>
+                  <th scope="col" i18n id='collector_album_status'>Status</th>
+                </tr>
+              </thead>
+              <tbody class="table__content">
+                <tr *ngFor="let a of collectorDetail.collectorAlbums">
+                  <th scope="row">{{a.id}}</th>
+                  <td>$ {{a.price}} COP</td>
+                  <td>{{a.status}}</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2 i18n id='shared_albums' class="subtitle">Favorite Performers</h2>
+            <table class="table" aria-label="Favorite_performers">
+              <thead>
+                <tr class= table__header>
+                  <th scope="col">#id</th>
+                  <th scope="col" i18n id='collector_favorite_performer'>Name</th>
+                </tr>
+              </thead>
+              <tbody class="table__content">
+                <tr *ngFor="let a of collectorDetail.favoritePerformers">
+                  <th scope="row">{{a.id}}</th>
+                  <td>{{a.name}}</td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-2 box-detail__buttons" align="right">
+
+      <div class=button-add>
+        <button id="addMusicianToCollector" mat-fab color="primary" (click)="onLinkMusicianToCollector()" aria-label="Add new collectors" title="Add musician to collectors">
+          <mat-icon>library_music</mat-icon>
+        </button>
+      </div>
+
+      <div class=button-add>
+        <button id="addBandToCollector" mat-fab color="primary" (click)="onLinkBandToCollector()" aria-label="Add new band to collectors" title="Add band to collectors">
+          <mat-icon>recent_actors</mat-icon>
+        </button>
+      </div>
+
+      <div class=button-add>
+        <button id="addAlbumToCollector" mat-fab color="primary" (click)="onLinkAlbumToCollector()" aria-label="Add new albums to collectors" title="Add albums to collectors">
+          <mat-icon>collections_bookmark</mat-icon>
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+</div>

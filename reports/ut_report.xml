@@ -1,0 +1,199 @@
+<testExecutions version="1">
+  <file path="src/app/prize/prize-create/prize-create.component.spec.ts">
+    <testCase name="SignForm Component description validity" duration="94"/>
+    <testCase name="SignForm Component creation validity" duration="23"/>
+    <testCase name="SignForm Component name validity" duration="20"/>
+    <testCase name="SignForm Component submitting form" duration="19"/>
+  </file>
+  <file path="src/app/collector/collector-musician/collector-musician.component.spec.ts">
+    <testCase name="CollectorMusicianComponent form invalid when empty" duration="32"/>
+    <testCase name="CollectorMusicianComponent should create" duration="19"/>
+  </file>
+  <file path="src/app/musician/musician-detail/musician-detail.component.spec.ts">
+    <testCase name="MusicianDetailComponent should create" duration="18"/>
+  </file>
+  <file path="src/app/collector/collector-create/collector-create.component.spec.ts">
+    <testCase name="CollectorCreateComponent should create" duration="19"/>
+  </file>
+  <file path="src/app/band/band-create/band-create.component.spec.ts">
+    <testCase name="BandCreateComponent should create" duration="26"/>
+    <testCase name="BandCreateComponent should create new musician and return it" duration="17"/>
+  </file>
+  <file path="src/app/shared/components/footer/footer.component.spec.ts">
+    <testCase name="FooterComponent should create" duration="5"/>
+  </file>
+  <file path="src/app/musician/musician-listar/musician-listar.component.spec.ts">
+    <testCase name="MusicianListarComponent should load component" duration="10"/>
+    <testCase name="MusicianListarComponent should create" duration="5"/>
+  </file>
+  <file path="src/app/collector/collector-listar/collector-listar.component.spec.ts">
+    <testCase name="CollectorListarComponent should create" duration="10"/>
+  </file>
+  <file path="src/app/collector/collector.service.spec.ts">
+    <testCase name="Service: Collector should create service" duration="1"/>
+    <testCase name="Service: Collector should add a collector and return it" duration="3"/>
+    <testCase name="Service: Collector getCollector() should return 2 records" duration="2"/>
+  </file>
+  <file path="src/app/app.component.spec.ts">
+    <testCase name="AppComponent should create the app" duration="2"/>
+    <testCase name="AppComponent should have as title 'Shared Records'" duration="2"/>
+  </file>
+  <file path="src/app/shared/components/header/header.component.spec.ts">
+    <testCase name="HeaderComponent should create" duration="6"/>
+  </file>
+  <file path="src/app/band/band.service.spec.ts">
+    <testCase name="Service: Band should ..." duration="1"/>
+    <testCase name="Service: Band should add a band and return it" duration="2"/>
+    <testCase name="Service: Band getBands() should return 2 records" duration="2"/>
+  </file>
+  <file path="src/app/shared/components/riel-card/card/card.component.spec.ts">
+    <testCase name="CardComponent should create" duration="4"/>
+  </file>
+  <file path="src/app/prize/prize-list/prize-list.component.spec.ts">
+    <testCase name="Measure length of components in a list should show details of each one of the elements in the array" duration="1"/>
+    <testCase name="Measure length of components in a list should set instance correctly" duration="1"/>
+    <testCase name="Measure length of components in a list should be an array of length one if there is an element there" duration="2"/>
+    <testCase name="Measure length of components in a list should be no contacts if there is no data" duration="1"/>
+    <testCase name="Measure length of components in a list should show details of each one of the elements in the array" duration="1"/>
+    <testCase name="Measure length of components in a list should be an array of length one if there is an element there" duration="1"/>
+    <testCase name="Measure length of components in a list should be no collectors if there is no data" duration="1"/>
+    <testCase name="Measure length of components in a list should set instance correctly" duration="1"/>
+  </file>
+  <file path="src/app/prize/prize-create/prize-create.component.spec.ts">
+    <testCase name="SignForm Component add track to album" duration="48"/>
+    <testCase name="SignForm Component creation validity" duration="27"/>
+    <testCase name="SignForm Component submitting Album form" duration="26"/>
+  </file>
+  <file path="src/app/band/band-listar/band-listar.component.spec.ts">
+    <testCase name="BandListarComponent should create" duration="9"/>
+  </file>
+  <file path="src/app/album/album.service.spec.ts">
+    <testCase name="Service: Album should add a album and return it" duration="2"/>
+    <testCase name="Service: Album getAlbum() should return 10 records" duration="1"/>
+    <testCase name="Service: Album should return service Album" duration="1"/>
+  </file>
+  <file path="src/app/prize/prize-list/prize-list.component.spec.ts">
+    <testCase name="PrizeListComponent should use getPrizes" duration="8"/>
+    <testCase name="PrizeListComponent should create  component" duration="5"/>
+  </file>
+  <file path="src/app/band/band-detail/band-detail.component.spec.ts">
+    <testCase name="BandDetailComponent should create" duration="13"/>
+  </file>
+  <file path="src/app/collector/collector-album/collector-album.component.spec.ts">
+    <testCase name="CollectorAlbumComponent should create" duration="34"/>
+    <testCase name="CollectorAlbumComponent form invalid when empty" duration="23"/>
+  </file>
+  <file path="src/app/prize/prize-list/prize-list.component.spec.ts">
+    <testCase name="Measure length of components in a list should be no contacts if there is no data" duration="1"/>
+    <testCase name="Measure length of components in a list should show details of each one of the elements in the array" duration="1"/>
+    <testCase name="Measure length of components in a list should be an array of length one if there is an element there" duration="1"/>
+    <testCase name="Measure length of components in a list should set instance correctly" duration="1"/>
+    <testCase name="Measure length of components in a list should post new prize" duration="1"/>
+  </file>
+  <file path="src/app/prize/prize-create/prize-create.component.spec.ts">
+    <testCase name="SignForm Component description validity" duration="18"/>
+    <testCase name="SignForm Component creation validity" duration="17"/>
+    <testCase name="SignForm Component name validity" duration="16"/>
+    <testCase name="SignForm Component submitting form" duration="21"/>
+    <testCase name="PrizeCreateComponent should add a prize and return it" duration="23"/>
+    <testCase name="PrizeCreateComponent form invalid when empty" duration="15"/>
+    <testCase name="PrizeCreateComponent should create" duration="13"/>
+  </file>
+  <file path="src/app/commenta/commenta.service.spec.ts">
+    <testCase name="Service: Commenta should ..." duration="2"/>
+  </file>
+  <file path="src/app/prize/prize-create/prize-create.component.spec.ts">
+    <testCase name="SignForm Component submitting prize form" duration="25"/>
+    <testCase name="SignForm Component submitting band form" duration="18"/>
+    <testCase name="SignForm Component creation validity" duration="22"/>
+    <testCase name="SignForm Component add prize to musician" duration="21"/>
+    <testCase name="SignForm Component creation validity" duration="19"/>
+  </file>
+  <file path="src/app/prize/prize-list/prize-list.component.spec.ts">
+    <testCase name="Measure length of components in a list should show details of each one of the elements in the array" duration="1"/>
+    <testCase name="Measure length of components in a list should be no contacts if there is no data" duration="1"/>
+    <testCase name="Measure length of components in a list should be an array of length one if there is an element there" duration="1"/>
+    <testCase name="Measure length of components in a list should set instance correctly" duration="1"/>
+  </file>
+  <file path="src/app/prize/prize.service.spec.ts">
+    <testCase name="Service: Prize should add a prize and return it" duration="2"/>
+    <testCase name="Service: Prize getPrizes() should return 2 records" duration="1"/>
+    <testCase name="Service: Prize should ..." duration="2"/>
+  </file>
+  <file path="src/app/album/album-create/album-create.component.spec.ts">
+    <testCase name="AlbumCreateComponent form invalid when empty" duration="23"/>
+    <testCase name="AlbumCreateComponent should create" duration="19"/>
+    <testCase name="AlbumCreateComponent should create new album and return it" duration="23"/>
+  </file>
+  <file path="src/app/prize/prize-create/prize-create.component.spec.ts">
+    <testCase name="SignForm Component name validity" duration="20"/>
+    <testCase name="SignForm Component submitting form" duration="19"/>
+    <testCase name="SignForm Component description validity" duration="19"/>
+    <testCase name="SignForm Component creation validity" duration="19"/>
+  </file>
+  <file path="src/app/band/band-prize/band-prize.component.spec.ts">
+    <testCase name="BandPrizeComponent form invalid when empty" duration="15"/>
+    <testCase name="BandPrizeComponent should create" duration="12"/>
+  </file>
+  <file path="src/app/prize/prize-create/prize-create.component.spec.ts">
+    <testCase name="SignForm Component creation validity" duration="14"/>
+    <testCase name="SignForm Component name validity" duration="15"/>
+    <testCase name="SignForm Component email validity" duration="16"/>
+    <testCase name="SignForm Component submitting form" duration="15"/>
+  </file>
+  <file path="src/app/musician/musician-prize/musician-prize.component.spec.ts">
+    <testCase name="MusicianPrizeComponent should create" duration="23"/>
+    <testCase name="MusicianPrizeComponent form invalid when empty" duration="14"/>
+  </file>
+  <file path="src/app/prize/prize-create/prize-create.component.spec.ts">
+    <testCase name="SignForm Component creation validity" duration="23"/>
+    <testCase name="SignForm Component submitting musician form" duration="16"/>
+    <testCase name="SignForm Component creation validity" duration="21"/>
+    <testCase name="SignForm Component add musician to band" duration="16"/>
+    <testCase name="SignForm Component submitting band form" duration="18"/>
+  </file>
+  <file path="src/app/prize/prize-list/prize-list.component.spec.ts">
+    <testCase name="Measure length of components in a list should set instance correctly" duration="1"/>
+    <testCase name="Measure length of components in a list should be an array of length one if there is an element there" duration="1"/>
+    <testCase name="Measure length of components in a list should be no contacts if there is no data" duration="1"/>
+    <testCase name="Measure length of components in a list should show details of each one of the elements in the array" duration="2"/>
+  </file>
+  <file path="src/app/album/album-detail/album-detail.component.spec.ts">
+    <testCase name="AlbumDetailComponent should create AlbumDetail" duration="13"/>
+  </file>
+  <file path="src/app/band/band-musician/band-musician.component.spec.ts">
+    <testCase name="BandMusicianComponent form invalid when empty" duration="11"/>
+    <testCase name="BandMusicianComponent should create" duration="10"/>
+  </file>
+  <file path="src/app/prize/prize-create/prize-create.component.spec.ts">
+    <testCase name="SignForm Component submitting musician form" duration="20"/>
+    <testCase name="SignForm Component submitting prize form" duration="23"/>
+    <testCase name="SignForm Component creation validity" duration="22"/>
+    <testCase name="SignForm Component creation validity" duration="24"/>
+    <testCase name="SignForm Component add prize to musician" duration="24"/>
+  </file>
+  <file path="src/app/album/album-listar/album-listar.component.spec.ts">
+    <testCase name="AlbumListarComponent should create Album list" duration="7"/>
+  </file>
+  <file path="src/app/collector/collector-band/collector-band.component.spec.ts">
+    <testCase name="CollectorBandComponent should create" duration="15"/>
+  </file>
+  <file path="src/app/musician/musician.service.spec.ts">
+    <testCase name="Service: Musician should add a musician and return it" duration="1"/>
+    <testCase name="Service: Musician getMusicians() should return 2 records" duration="1"/>
+    <testCase name="Service: Musician should ..." duration="3"/>
+  </file>
+  <file path="src/app/prize/prize-create/prize-create.component.spec.ts">
+    <testCase name="SignForm Component creation validity" duration="10"/>
+    <testCase name="SignForm Component name validity" duration="14"/>
+    <testCase name="SignForm Component submitting form" duration="13"/>
+    <testCase name="SignForm Component organization validity" duration="11"/>
+  </file>
+  <file path="src/app/collector/collector-detail/collector-detail.component.spec.ts">
+    <testCase name="CollectorDetailComponent should create" duration="16"/>
+  </file>
+  <file path="src/app/musician/musician-create/musician-create.component.spec.ts">
+    <testCase name="MusicianCreateComponent should create new musician and return it" duration="15"/>
+    <testCase name="MusicianCreateComponent should create" duration="19"/>
+  </file>
+</testExecutions>

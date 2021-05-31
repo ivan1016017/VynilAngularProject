@@ -1,0 +1,48 @@
+
+<div class="container" >
+
+  <div class="mat-card">
+
+    <div mat-dialog-title>
+      <h1 i18n id='title_new_band'>Create New Band</h1>
+    </div>
+
+    <form [formGroup]="bandForm" (ngSubmit)="createBand(bandForm.value)">
+
+      <mat-dialog-content class="mat-typography">
+
+        <mat-form-field class="form__field">
+          <mat-label i18n id='create_band_name' class="form__label">Band Name *</mat-label>
+          <input i18n-placeholder formControlName="name" matInput placeholder="Band Name" id="name">
+          <mat-error i18n id='name_required' *ngIf="bandForm.get('name').hasError('required') && bandForm.get('name').touched"> Name required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="form__field">
+          <mat-label i18n id='band_creation_date' class="form__label">Band Creation Date *</mat-label>
+          <input i18n-placeholder formControlName="creationDate" matInput id="creationDate"  type="date" placeholder="Band Creation Date" >
+          <mat-error id='band_creation_date_required' *ngIf="bandForm.get('creationDate').hasError('required') && bandForm.get('creationDate').touched"> Name required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="form__field">
+          <mat-label i18n id='band_description' class="form__label">Band Description *</mat-label>
+          <input i18n-placeholder  matInput id="description" type="text"  formControlName="description"
+          placeholder="Band Description" >
+          <mat-error i18n id='band_description_date_required' *ngIf="bandForm.get('description').hasError('required') && bandForm.get('description').touched"> Description required</mat-error>
+        </mat-form-field>
+
+      </mat-dialog-content>
+
+      <mat-dialog-actions align="end">
+        <div class="button-row">
+          <button i18n class="button-row__submit"  id="submit" mat-flat-button color="primary"  type="submit"    [disabled]="bandForm.invalid">Create</button>
+          <button i18n mat-stroked-button id="cancel" color="warn" type="button"  (click)="cancelCreation()">Cancel</button>
+        </div>
+      </mat-dialog-actions>
+
+    </form>
+  </div>
+</div>
+
+
+
+
